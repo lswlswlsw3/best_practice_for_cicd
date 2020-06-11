@@ -1,0 +1,8 @@
+# application name
+spring:
+  application:
+    name: init-test
+    
+# application port
+server:
+  port: 8086
