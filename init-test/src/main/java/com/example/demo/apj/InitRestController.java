@@ -21,4 +21,9 @@ public class InitRestController {
 	public String firstCommit() {
 		return "first commit!";
 	}
+	
+	@RequestMapping("SecondCommit")
+	public String secondCommit() {
+		return "second commit!";
+	}
 }
