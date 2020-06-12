@@ -26,4 +26,9 @@ public class InitRestController {
 	public String secondCommit() {
 		return "second commit!";
 	}
+	
+	@RequestMapping("ConnectTest")
+	public String connectTest() {
+		return "connect test for sts, git, jenkins job!!";
+	}
 }
