@@ -14,7 +14,7 @@ EXPOSE 8086
 ARG JAR_FILE=build/libs/init-test-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} to-do-springboot.jar
+ADD ${JAR_FILE} init-test.jar
 
 # Run the jar file
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/init-test.jar"]
