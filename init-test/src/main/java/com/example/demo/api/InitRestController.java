@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * init RestConroller
- * @author mzc01-seonwoong
+ * @author sunwoong@mz.co.kr
  * @since 20.06.11
  */
 
@@ -17,6 +17,6 @@ public class InitRestController {
 	@RequestMapping("")
 	public String firstCommit() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		return "cicd started : "+format.format(System.currentTimeMillis());
+		return "cicd started! : "+format.format(System.currentTimeMillis());
 	}
 }
