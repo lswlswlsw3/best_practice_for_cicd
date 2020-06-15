@@ -1,7 +1,10 @@
-package com.example.demo.apj;
+package com.example.demo.api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.service.Hello;
 
 /**
  * init RestConroller
@@ -12,14 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/init")
 public class InitRestController {
-	@RequestMapping("/hello")
-	public String hello() {
-		return "hello to spring boot!";
-	}
-	
+	@Autowired
+	Hello hello;
+		
 	@RequestMapping("/firstCommit")
 	public String firstCommit() {
-		return "first commit!";
+		return "first commit!"+hello.hello();
 	}
 	
 	@RequestMapping("SecondCommit")

@@ -18,3 +18,6 @@ ADD ${JAR_FILE} init-test.jar
 
 # Run the jar file
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/init-test.jar"]
+
+# Docker Image Run
+RUN docker run --rm -p 8086:8086 init-test
