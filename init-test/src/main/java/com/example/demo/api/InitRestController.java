@@ -1,10 +1,8 @@
 package com.example.demo.api;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.text.SimpleDateFormat;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.demo.service.Hello;
 
 /**
  * init RestConroller
@@ -13,23 +11,12 @@ import com.example.demo.service.Hello;
  */
 
 @RestController
-@RequestMapping("/init")
+@RequestMapping("/cicd")
 public class InitRestController {
-	@Autowired
-	Hello hello;
-		
-	@RequestMapping("/firstCommit")
+	
+	@RequestMapping("")
 	public String firstCommit() {
-		return "first commit!"+hello.hello();
-	}
-	
-	@RequestMapping("SecondCommit")
-	public String secondCommit() {
-		return "second commit!";
-	}
-	
-	@RequestMapping("ConnectTest2")
-	public String connectTest() {
-		return "connect test for sts, git, jenkins job!!";
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return "cicd started : "+format.format(System.currentTimeMillis());
 	}
 }
