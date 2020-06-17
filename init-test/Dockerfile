@@ -19,7 +19,3 @@ ADD ${JAR_FILE} init-test.jar
 
 # Run the jar file
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/init-test.jar"]
-
-RUN apt-get update
-RUN apt install phthon3-pip -y
-RUN pip3 install awscli - upgrade
