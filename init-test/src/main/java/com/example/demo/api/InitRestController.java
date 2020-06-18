@@ -17,6 +17,6 @@ public class InitRestController {
 	@RequestMapping("")
 	public String firstCommit() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		return "best practice cicd(MSA) : "+format.format(System.currentTimeMillis());
+		return "best practice cicd (MSA)2 : "+format.format(System.currentTimeMillis());
 	}
 }
